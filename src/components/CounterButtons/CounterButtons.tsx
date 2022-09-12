@@ -11,7 +11,6 @@ export type ButtonsPropsType = {
     count: number
 }
 
-
 export const CounterButtons: FC<ButtonsPropsType> = (props) => {
 
 
