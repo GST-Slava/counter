@@ -3,7 +3,13 @@ import './App.css';
 import {Counter} from "./components/Counter";
 
 function App() {
-    const maxValue = 5;
+    const settings = () => {
+        setCount(maxValue)
+    }
+
+    const [maxValue, setMaxValue] = useState(5)
+
+    /*const maxValue = 5;*/
     const minValue = 0;
 
     const [count, setCount] = useState(0)
@@ -24,12 +30,13 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <Counter
-                count={count}
-                increment={increment}
-                decrement={decrement}
-                maxValue={maxValue}
-                reset={reset}
-                minValue={minValue}
+                    count={count}
+                    increment={increment}
+                    decrement={decrement}
+                    maxValue={maxValue}
+                    reset={reset}
+                    minValue={minValue}
+                    settings={settings}
                 />
             </header>
         </div>

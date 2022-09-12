@@ -1,12 +1,13 @@
 import React, {FC} from 'react';
 import s from './CounterButtons.module.css'
 import {Button} from "@material-ui/core";
-import {ExpandLess, KeyboardArrowDown, RotateLeft} from "@material-ui/icons";
+import {ExpandLess, KeyboardArrowDown, RotateLeft, Settings} from "@material-ui/icons";
 
 export type ButtonsPropsType = {
     increment: () => void
     decrement: () => void
     reset: () => void
+    settings: () => void
     maxValue: number
     minValue: number
     count: number
@@ -21,7 +22,7 @@ export const CounterButtons: FC<ButtonsPropsType> = (props) => {
                     onClick={props.increment}
                     variant="contained"
                     color={props.count === props.maxValue ? "secondary" : "primary"}
-                    size="large"
+                    size="small"
                     startIcon={<ExpandLess/>}
             >
                 inc
@@ -30,7 +31,7 @@ export const CounterButtons: FC<ButtonsPropsType> = (props) => {
                     onClick={props.decrement}
                     variant="contained"
                     color="primary"
-                    size="large"
+                    size="small"
                     startIcon={<KeyboardArrowDown/>}
             >
                 dec
@@ -38,10 +39,17 @@ export const CounterButtons: FC<ButtonsPropsType> = (props) => {
             <Button disabled={props.count === 0}
                     onClick={props.reset}
                     variant="contained"
-                    size="large"
+                    size="small"
                     startIcon={<RotateLeft/>}
             >
                 Reset
+            </Button>
+            <Button onClick={props.settings}
+                    variant="contained"
+                    size="small"
+                    startIcon={<Settings/>}
+            >
+                Settings
             </Button>
         </div>
     );

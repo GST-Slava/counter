@@ -8,6 +8,7 @@ export type CounterPropsType = {
     increment: () => void
     decrement: () => void
     reset: () => void
+    settings: () => void
     maxValue: number
     minValue: number
 }
@@ -23,6 +24,7 @@ export const Counter: FC<CounterPropsType> = (props) => {
                 maxValue={props.maxValue}
                 count={props.count}
                 minValue={props.minValue}
+                settings={props.settings}
             />
         </div>
     );
