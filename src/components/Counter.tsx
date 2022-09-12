@@ -15,7 +15,7 @@ export type CounterPropsType = {
 export const Counter: FC<CounterPropsType> = (props) => {
     return (
         <div className={s.counter}>
-            <CounterDisplay count={props.count}/>
+            <CounterDisplay count={props.count} maxValue={props.maxValue}/>
             <CounterButtons
                 increment={props.increment}
                 decrement={props.decrement}

@@ -1,0 +1,29 @@
+.displayExternal{
+    width: 340px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid deepskyblue;
+    margin-bottom: 15px;
+}
+
+.display {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid deepskyblue;
+    color: deepskyblue;
+}
+
+.displayError {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid deepskyblue;
+    color: red;
+}
