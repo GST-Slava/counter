@@ -5,6 +5,8 @@
     align-items: center;
     justify-content: center;
     border: 2px solid deepskyblue;
+    box-sizing: border-box;
+    margin-bottom: 3px;
 }
 
 .displayExternal {
@@ -15,6 +17,7 @@
     justify-content: center;
     border: 2px solid deepskyblue;
     margin-bottom: 15px;
+    box-sizing: border-box;
 }
 
 .settingsInput{
@@ -25,6 +28,7 @@
     justify-content: center;
     border: 2px solid deepskyblue;
     margin-bottom: 15px;
+    box-sizing: border-box;
 }
 
 .display {
@@ -36,6 +40,7 @@
     justify-content: center;
     border: 2px solid deepskyblue;
     color: deepskyblue;
+    box-sizing: border-box;
 }
 
 .displayError {
@@ -47,4 +52,5 @@
     justify-content: center;
     border: 2px solid deepskyblue;
     color: red;
+    box-sizing: border-box;
 }

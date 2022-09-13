@@ -20,7 +20,11 @@ export type CounterPropsType = {
 export const Counter: FC<CounterPropsType> = (props) => {
     return (
         <div className={s.counter}>
-            <CounterDisplay count={props.count} maxValue={props.maxValue} minValue={props.minValue}/>
+            <CounterDisplay
+                count={props.count}
+                maxValue={props.maxValue}
+                minValue={props.minValue}
+            />
             <CounterButtons
                 increment={props.increment}
                 decrement={props.decrement}
@@ -29,10 +33,10 @@ export const Counter: FC<CounterPropsType> = (props) => {
                 count={props.count}
                 minValue={props.minValue}
                 settings={props.settings}
-               /* getFromLocalStorageHandler={props.getFromLocalStorageHandler}
-                setToLocalStorageHandler={props.setToLocalStorageHandler}
-                clearLocalStorageHandler={props.clearLocalStorageHandler}
-                removeItemFromLocalStorageHandler={props.removeItemFromLocalStorageHandler}*/
+                /* getFromLocalStorageHandler={props.getFromLocalStorageHandler}
+                 setToLocalStorageHandler={props.setToLocalStorageHandler}
+                 clearLocalStorageHandler={props.clearLocalStorageHandler}
+                 removeItemFromLocalStorageHandler={props.removeItemFromLocalStorageHandler}*/
             />
         </div>
     );

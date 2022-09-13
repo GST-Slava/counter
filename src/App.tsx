@@ -3,7 +3,7 @@ import './App.css';
 import {Counter} from "./components/Counter";
 
 function App() {
-    const [maxValue, setMaxValue] = useState<number>(5)
+    const [maxValue, setMaxValue] = useState(5)
     const [count, setCount] = useState<number>(0)
     const minValue = 0;
     const increment = () => {
@@ -20,7 +20,7 @@ function App() {
     }
 
     useEffect(() => {
-       localStorage.setItem("counterValue", JSON.stringify(count))
+        localStorage.setItem("counterValue", JSON.stringify(count))
     }, [count])//так как есть зависимость, отработает столько раз сколько раз изменится зависимость
 
 
@@ -54,6 +54,7 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <Counter
+
                     count={count}
                     increment={increment}
                     decrement={decrement}
