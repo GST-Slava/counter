@@ -11,10 +11,10 @@ export type CounterPropsType = {
     settings: () => void
     maxValue: number
     minValue: number
-    setToLocalStorageHandler: () => void
+    /*setToLocalStorageHandler: () => void
     getFromLocalStorageHandler: () => void
     clearLocalStorageHandler: () => void
-    removeItemFromLocalStorageHandler: () => void
+    removeItemFromLocalStorageHandler: () => void*/
 }
 
 export const Counter: FC<CounterPropsType> = (props) => {
@@ -29,10 +29,10 @@ export const Counter: FC<CounterPropsType> = (props) => {
                 count={props.count}
                 minValue={props.minValue}
                 settings={props.settings}
-                getFromLocalStorageHandler={props.getFromLocalStorageHandler}
+               /* getFromLocalStorageHandler={props.getFromLocalStorageHandler}
                 setToLocalStorageHandler={props.setToLocalStorageHandler}
                 clearLocalStorageHandler={props.clearLocalStorageHandler}
-                removeItemFromLocalStorageHandler={props.removeItemFromLocalStorageHandler}
+                removeItemFromLocalStorageHandler={props.removeItemFromLocalStorageHandler}*/
             />
         </div>
     );

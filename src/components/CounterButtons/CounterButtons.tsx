@@ -2,12 +2,8 @@ import React, {FC} from 'react';
 import s from './CounterButtons.module.css'
 import {Button} from "@material-ui/core";
 import {
-    Delete,
     ExpandLess,
-    GetApp,
     KeyboardArrowDown,
-    LayersClear,
-    PlaylistAddCheck,
     RotateLeft,
     Settings
 } from "@material-ui/icons";
@@ -20,10 +16,10 @@ export type ButtonsPropsType = {
     maxValue: number
     minValue: number
     count: number
-    setToLocalStorageHandler: () => void
+    /*setToLocalStorageHandler: () => void
     getFromLocalStorageHandler: () => void
     clearLocalStorageHandler: () => void
-    removeItemFromLocalStorageHandler: () => void
+    removeItemFromLocalStorageHandler: () => void*/
 }
 
 export const CounterButtons: FC<ButtonsPropsType> = (props) => {
@@ -65,47 +61,6 @@ export const CounterButtons: FC<ButtonsPropsType> = (props) => {
                 >
                     Settings
                 </Button>
-            </div>
-            <div>
-                <div>
-                    <Button
-                        onClick={props.setToLocalStorageHandler}
-                        variant="contained"
-                        size="small"
-                        startIcon={<PlaylistAddCheck/>}
-                    >
-                        Set-----LS
-                    </Button>
-                    <Button
-                        onClick={props.getFromLocalStorageHandler}
-                        variant="contained"
-                        color="primary"
-                        size="small"
-                        startIcon={<GetApp/>}
-                    >
-                        Get-----LS
-                    </Button>
-                </div>
-                <div>
-                    <Button
-                        onClick={props.clearLocalStorageHandler}
-                        variant="contained"
-                        size="small"
-                        color={"secondary"}
-                        startIcon={<LayersClear/>}
-                    >
-                        Clear LS
-                    </Button>
-                    <Button
-                        onClick={props.removeItemFromLocalStorageHandler}
-                        variant="contained"
-                        size="small"
-                        color={"secondary"}
-                        startIcon={<Delete/>}
-                    >
-                        Del Item +1
-                    </Button>
-                </div>
             </div>
         </div>
     );
