@@ -3,20 +3,22 @@ import './App.css';
 import {Counter} from "./components/Counter";
 
 function App() {
-    const [maxValue, setMaxValue] = useState(5)
+
     const [count, setCount] = useState<number>(0)
-    const minValue = 0;
+    const [minValue, setMinValue] = useState(0)
+    const [maxValue, setMaxValue] = useState(5)
     const increment = () => {
-        setCount(count + 1)
+        if (count !== maxValue)
+            setCount(count + 1)
     }
     const decrement = () => {
         if (minValue === count) {
         }
         setCount(count - 1)
     }
-    const reset = () => setCount(0)
+    const reset = () => setCount(minValue)
     const settings = () => {
-        //
+        setMaxValue(maxValue)
     }
 
     useEffect(() => {
@@ -54,13 +56,12 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <Counter
-
                     count={count}
                     increment={increment}
                     decrement={decrement}
                     maxValue={maxValue}
-                    reset={reset}
                     minValue={minValue}
+                    reset={reset}
                     settings={settings}
                     /*getFromLocalStorageHandler={getFromLocalStorageHandler}
                     setToLocalStorageHandler={setToLocalStorageHandler}

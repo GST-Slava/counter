@@ -81,7 +81,6 @@ export const CounterDisplay: FC<CounterDisplayPropsType> = (props) => {
                     />
                 </form>
             </div>
-
             <div className={s.displayExternal}>
                 <div className={displayErrorRed}>
                     {props.count}
